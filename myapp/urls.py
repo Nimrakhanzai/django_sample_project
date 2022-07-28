@@ -6,5 +6,5 @@ urlpatterns = [
     path("", views.index, name="myapp"),
     path("date_time", views.date_time, name="date_time"),
     path("sys_info", views.sys_info, name="sys_info"),
-    path("calendar", views.calendar, name="calendar"),
+    path('<int:year>/<str:month>/', views.calendar, name="calendar"),
 ]
