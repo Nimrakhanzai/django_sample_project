@@ -14,12 +14,7 @@ def date_time(request):
 
 def sys_info(request):
     uname = platform.uname()
-    return HttpResponse(f"System: {uname.system}",(f"Node Name: {uname.node}"))
-    return HttpResponse(f"Node Name: {uname.node}")
-    return HttpResponse(f"Release: {uname.release}")
-    return HttpResponse(f"Version: {uname.version}")
-    return HttpResponse(f"Machine: {uname.machine}")
-    return HttpResponse(f"Processor: {uname.processor}")
+    return HttpResponse(f"System: {uname.system} \nNode: {uname.node} \nRelease: {uname.release} \nVersion: {uname.version} \nMachine: {uname.machine} \nProcessor: {uname.processor}")
 
 def calendar(request):
     return HttpResponse("This is calendar page")
